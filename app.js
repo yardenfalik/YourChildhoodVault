@@ -95,7 +95,7 @@ function lock() {
     localStorage.setItem('dataBase', dataBaseString);
 
     var customLink = document.getElementById('customLink');
-    customLink.textContent = 'http://localhost:3000/vault?dataBase=' + dataBaseString;
+    customLink.textContent = 'https://yardenfalik.github.io/YourChildhoodVault?dataBase=' + dataBaseString;
 }
 
 function loadData() {
