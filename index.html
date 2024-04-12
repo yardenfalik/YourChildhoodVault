@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Childhood Vault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Your Childhood Vault 🏛️</h1>
+    <p>
+        ⓘ This is the place when you can archive your favorite movies, games, TV shows, and songs from your childhood.
+        <br>
+        You can add up to 5 items for each category, and once you're done, you can lock the vault to keep your memories safe.
+    </p>
+    <p>* Please note: For optimal outcomes, aim to maintain a 2:3 aspect ratio for your photos, except for the song's album cover, which should be in a 1:1 aspect ratio</p>
+    <main>
+        <section>
+            <h2>Movies</h2>
+            <div id="movieInputs">
+                <input type="text" id="movie1" placeholder="Movie Name"/>
+                <input type="text" id="movie1Img" placeholder="Movie Image URL"/>
+                <br>
+                <input type="text" id="movie2" placeholder="Movie Name"/>
+                <input type="text" id="movie2Img" placeholder="Movie Image URL"/>
+                <br>
+                <input type="text" id="movie3" placeholder="Movie Name"/>
+                <input type="text" id="movie3Img" placeholder="Movie Image URL"/>
+                <br>
+                <input type="text" id="movie4" placeholder="Movie Name"/>
+                <input type="text" id="movie4Img" placeholder="Movie Image URL"/>
+                <br>
+                <input type="text" id="movie5" placeholder="Movie Name"/>
+                <input type="text" id="movie5Img" placeholder="Movie Image URL"/>
+                <br>
+                <button id="saveMovies" onclick="saveData('movie')">Save</button>
+            </div>
+            <div id="moviesDisplay" style="display: none;">
+                <ul id="moviesList"></ul>
+                <button id="editMovies" onclick="editItems('movie')">Edit Movies</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Games</h2>
+            <div id="gameInputs">
+                <input type="text" id="game1" placeholder="Game Name"/>
+                <input type="text" id="game1Img" placeholder="Game Image URL"/>
+                <br>
+                <input type="text" id="game2" placeholder="Game Name"/>
+                <input type="text" id="game2Img" placeholder="Game Image URL"/>
+                <br>
+                <input type="text" id="game3" placeholder="Game Name"/>
+                <input type="text" id="game3Img" placeholder="Game Image URL"/>
+                <br>
+                <input type="text" id="game4" placeholder="Game Name"/>
+                <input type="text" id="game4Img" placeholder="Game Image URL"/>
+                <br>
+                <input type="text" id="game5" placeholder="Game Name"/>
+                <input type="text" id="game5Img" placeholder="Game Image URL"/>
+                <br>
+                <button id="saveGames" onclick="saveData('game')">Save</button>
+            </div>
+            <div id="gamesDisplay" style="display: none;">
+                <ul id="gamesList"></ul>
+                <button id="editGames" onclick="editItems('game')">Edit Games</button>
+            </div>
+        </section>
+        <section>
+            <h2>TV Shows</h2>
+            <div id="showInputs">
+                <input type="text" id="show1" placeholder="TV Show Name"/>
+                <input type="text" id="show1Img" placeholder="TV Show Image URL"/>
+                <br>
+                <input type="text" id="show2" placeholder="TV Show Name"/>
+                <input type="text" id="show2Img" placeholder="TV Show Image URL"/>
+                <br>
+                <input type="text" id="show3" placeholder="TV Show Name"/>
+                <input type="text" id="show3Img" placeholder="TV Show Image URL"/>
+                <br>
+                <input type="text" id="show4" placeholder="TV Show Name"/>
+                <input type="text" id="show4Img" placeholder="TV Show Image URL"/>
+                <br>
+                <input type="text" id="show5" placeholder="TV Show Name"/>
+                <input type="text" id="show5Img" placeholder="TV Show Image URL"/>
+                <br>
+                <button id="saveTV" onclick="saveData('show')">Save</button>
+            </div>
+            <div id="showsDisplay" style="display: none;">
+                <ul id="showsList"></ul>
+                <button id="editTV" onclick="editItems('show')">Edit TV Shows</button>
+            </div>
+        </section>
+        <section>
+            <h2>Music</h2>
+            <div id="songInputs">
+                <input type="text" id="song1" placeholder="Song Name"/>
+                <input type="text" id="song1Img" placeholder="Song Image URL"/>
+                <br>
+                <input type="text" id="song2" placeholder="Song Name"/>
+                <input type="text" id="song2Img" placeholder="Song Image URL"/>
+                <br>
+                <input type="text" id="song3" placeholder="Song Name"/>
+                <input type="text" id="song3Img" placeholder="Song Image URL"/>
+                <br>
+                <input type="text" id="song4" placeholder="Song Name"/>
+                <input type="text" id="song4Img" placeholder="Song Image URL"/>
+                <br>
+                <input type="text" id="song5" placeholder="Song Name"/>
+                <input type="text" id="song5Img" placeholder="Song Image URL"/>
+                <br>
+                <button id="saveSongs" onclick="saveData('song')">Save</button>
+            </div>
+            <div id="songsDisplay" style="display: none;">
+                <ul id="songsList"></ul>
+                <button id="editSongs" onclick="editItems('song')">Edit Songs</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <button id="saveSongs" onclick="lock()">🔒 Lock Vault</button>
+        <p id="customLink"></p>
+        <a onclick="clearData()">clear Database</a>
+        <br>
+        <p style="text-align: left;">&copy; Made By <a href="https://yardenfalik.github.io/">Yarden Falik</a></p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
