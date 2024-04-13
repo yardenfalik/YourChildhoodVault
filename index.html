@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Childhood Vault</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 x=%22-.13em%22 font-size=%2290%22>🏛️</text></svg>">
+    <meta name="description" content="This is the place when you can archive your favorite movies, games, TV shows, and songs from your childhood.">
 </head>
 <body>
     <h1>Your Childhood Vault 🏛️</h1>
@@ -14,6 +16,19 @@
         You can add up to 5 items for each category, and once you're done, you can lock the vault to keep your memories safe.
     </p>
     <p>* Please note: For optimal outcomes, aim to maintain a 2:3 aspect ratio for your photos, except for the song's album cover, which should be in a 1:1 aspect ratio</p>
+    <section>
+        <h2>Personal Info</h2>
+        <p>ⓘ We do not store your information, it will be saved within your browser.</p>
+        <div id="infoInputs">
+            <input type="text" id="name" placeholder="Your Name"/>
+            <input type="text" id="year" placeholder="Year Of Birth"/>
+            <button id="saveInfo" onclick="saveInfo()">Save</button>
+        </div>
+        <div id="infoDisplay" style="display: none;">
+            <p id="info"></p>
+            <button id="editInfo" onclick="editInfo()">Edit Info</button>
+        </div>
+    </section>
     <main>
         <section>
             <h2>Movies</h2>

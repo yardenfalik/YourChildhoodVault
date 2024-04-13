@@ -1,3 +1,4 @@
+var info = {};
 var movies = {};
 var games = {};
 var shows = {};
@@ -83,8 +84,42 @@ function editItems(item) {
     itemsDisplay.style.display = 'none';
 }
 
+function saveInfo()
+{
+    var name = document.getElementById('name').value;
+    var year = document.getElementById('year').value;
+
+    info = {
+        name: name,
+        birth: year
+    }
+
+    displayInfo();
+}
+
+function displayInfo() {
+    console.log('displayInfo');
+    var display = document.getElementById('info');
+    var infoInputs = document.getElementById('infoInputs');
+    var infoDisplay = document.getElementById('infoDisplay');
+
+    infoInputs.style.display = 'none';
+    infoDisplay.style.display = 'block';
+
+    display.textContent = 'Name: ' + info.name + ' | Birth Year: ' + info.birth + ' | Age: ' + (2024 - info.birth);
+}
+
+function editInfo() {
+    var infoInputs = document.getElementById('infoInputs');
+    var infoDisplay = document.getElementById('infoDisplay');
+
+    infoInputs.style.display = 'block';
+    infoDisplay.style.display = 'none';
+}
+
 function lock() {
     dataBase = {
+        info: info,
         movies: movies,
         games: games,
         shows: shows,
@@ -107,11 +142,13 @@ function loadData() {
     games = dataBase.games;
     shows = dataBase.shows;
     songs = dataBase.songs;
+    info = dataBase.info;
 
     Displayitems('movie');
     Displayitems('game');
     Displayitems('show');
     Displayitems('song');
+    displayInfo();
 }
 
 function clearData() {
@@ -120,11 +157,13 @@ function clearData() {
     games = {};
     shows = {};
     songs = {};
+    info = {};
 
-    Displayitems('movie');
-    Displayitems('game');
-    Displayitems('show');
-    Displayitems('song');
+    editItems('movie');
+    editItems('game');
+    editItems('show');
+    editItems('song');
+    editInfo();
 }
 
 function load() {
@@ -138,11 +177,13 @@ function load() {
         games = dataBase.games;
         shows = dataBase.shows;
         songs = dataBase.songs;
+        info = dataBase.info;
 
         Displayitems('movie');
         Displayitems('game');
         Displayitems('show');
         Displayitems('song');
+        displayInfo();
     }
 }
 
